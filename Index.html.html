@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fique esperto: golpes na internet e redes sociais</title>
+<meta name="description" content="Aprenda a reconhecer e evitar golpes na internet e nas redes sociais.">
+<style>
+:root{--bg:#F2F5F8;--sf:#fff;--ink:#11212F;--mut:#445666;--line:#C5D1DB;--br:#0B5C63;--onbr:#fff;--wn:#FFC933;--bad:#B3261E;--ok:#1B7F4B;--bw:1px;--fs:100;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0C1620;--sf:#13222F;--ink:#E8EEF3;--mut:#A9B8C4;--line:#2A3D4D;--br:#5CC8CF;--onbr:#04222A;--wn:#FFD45C;--bad:#FF8A80;--ok:#6FD3A0;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0C1620;--sf:#13222F;--ink:#E8EEF3;--mut:#A9B8C4;--line:#2A3D4D;--br:#5CC8CF;--onbr:#04222A;--wn:#FFD45C;--bad:#FF8A80;--ok:#6FD3A0;color-scheme:dark}
+:root[data-contrast="high"]{--bg:#000;--sf:#000;--ink:#fff;--mut:#fff;--line:#fff;--br:#FFEB3B;--onbr:#000;--wn:#FFEB3B;--bad:#FF7B7B;--ok:#7CFF9B;--bw:2px;color-scheme:dark}
+:root[data-contrast="high"] a{text-decoration:underline}
+html{font-size:calc(var(--fs)*1%);scroll-padding-top:calc(5rem + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:1rem/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--sf);z-index:30}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.2;margin:0 0 .6rem}
+h1{font-size:clamp(2rem,6vw,3.2rem)}h2{font-size:clamp(1.5rem,4vw,2rem)}h3{font-size:1.15rem}
+p{margin:0 0 1rem;max-width:68ch}
+a{color:var(--br)}
+:focus-visible{outline:3px solid var(--wn);outline-offset:2px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1rem}
+.skip{position:absolute;left:-999px;background:var(--wn);color:#000;padding:.6rem 1rem;z-index:50}.skip:focus{left:.5rem;top:.5rem}
+button{font:inherit;color:inherit;cursor:pointer;min-height:2.75rem;border-radius:.5rem;border:var(--bw) solid var(--line);background:var(--sf);padding:.4rem .9rem}
+button:hover{border-color:var(--br)}
+button[aria-pressed="true"],button[aria-selected="true"],.pri{background:var(--br);color:var(--onbr);border-color:var(--br)}
+#a11y{background:var(--sf);border-bottom:var(--bw) solid var(--line)}
+#a11y .wrap{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center;padding-block:.5rem}
+#a11y span{margin-right:.4rem;font-weight:600}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:var(--sf);border-bottom:var(--bw) solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.5rem}
+.brand{font:700 1.15rem Georgia,serif;text-decoration:none;color:var(--ink)}
+nav ul{display:flex;gap:.25rem;list-style:none;margin:0;padding:0}
+nav a{display:block;padding:.6rem .8rem;border-radius:.5rem;text-decoration:none;color:var(--ink);font-weight:600}
+nav a:hover{background:var(--bg)}
+#menu{display:none}
+@media (max-width:48rem){#menu{display:block}nav ul{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;background:var(--sf);border-bottom:var(--bw) solid var(--line);padding:.5rem 1rem}nav ul.open{display:flex}}
+section{padding:3rem 0}
+.hero{display:grid;gap:2rem;grid-template-columns:1.1fr .9fr;align-items:center}
+@media (max-width:48rem){.hero{grid-template-columns:1fr}}
+.sms{background:var(--sf);border:var(--bw) solid var(--line);border-radius:1rem;padding:1.1rem}
+.sms small{color:var(--mut)}
+.bubble{background:var(--bg);border-radius:.9rem .9rem .9rem .2rem;padding:.9rem;margin:.5rem 0}
+.flag{font:inherit;min-height:0;padding:.05rem .3rem;background:color-mix(in srgb,var(--wn) 45%,transparent);border:0;border-bottom:2px solid var(--bad);border-radius:.2rem;text-align:left}
+#flagnote{min-height:4.5rem;border-left:4px solid var(--bad);padding:.4rem .8rem;margin:0}
+.tabs{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem}
+.panel{background:var(--sf);border:var(--bw) solid var(--line);border-radius:1rem;padding:1.3rem;display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+.panel h3{margin-bottom:.3rem}.panel ul{margin:0;padding-left:1.2rem}.panel .full{grid-column:1/-1}
+.bad h3{color:var(--bad)}.good h3{color:var(--ok)}
+.card{background:var(--sf);border:var(--bw) solid var(--line);border-radius:1rem;padding:1.3rem}
+.row{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1rem}
+.fb{padding:.7rem 1rem;border-radius:.5rem;border-left:4px solid var(--br);background:var(--bg);margin-top:1rem}
+.fb.r{border-color:var(--bad)}.fb.c{border-color:var(--ok)}
+.check{list-style:none;padding:0;margin:0;display:grid;gap:.5rem}
+.check label{display:flex;gap:.7rem;align-items:flex-start;padding:.7rem;border:var(--bw) solid var(--line);border-radius:.6rem;background:var(--sf);cursor:pointer}
+.check input{width:1.4rem;height:1.4rem;margin-top:.15rem;accent-color:var(--br);flex:none}
+progress{width:100%;height:1rem;accent-color:var(--br)}
+ol.steps{padding-left:1.4rem;display:grid;gap:.8rem}ol.steps li::marker{font-weight:700;color:var(--br)}
+footer{border-top:var(--bw) solid var(--line);padding:2rem 0;color:var(--mut);font-size:.9rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<div id="a11y" role="toolbar" aria-label="Ferramentas de acessibilidade">
+<div class="wrap"><span>Acessibilidade</span>
+<button id="fm" aria-label="Diminuir fonte">A−</button>
+<button id="fn" aria-label="Tamanho normal da fonte">A</button>
+<button id="fp" aria-label="Aumentar fonte">A+</button>
+<button id="hc" aria-pressed="false">Alto contraste</button>
+<button id="dk" aria-pressed="false">Tema escuro</button>
+<button id="rs">Restaurar</button>
+<span id="live" class="sr" role="status" style="font-weight:400;color:var(--mut)"></span></div></div>
+
+<header class="top"><div class="wrap">
+<a class="brand" href="#inicio">Fique esperto</a>
+<button id="menu" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav aria-label="Principal"><ul id="nav">
+<li><a href="#golpes">Tipos de golpe</a></li><li><a href="#teste">Teste</a></li><li><a href="#protecao">Proteção</a></li><li><a href="#socorro">Caí num golpe</a></li></ul></nav>
+</div></header>
+
+<main id="conteudo">
+<section id="inicio"><div class="wrap hero">
+<div><h1>Antes de clicar, pagar ou responder, desconfie.</h1>
+<p>Golpes na internet e nas redes sociais usam pressa, medo e promessas fáceis. Aqui você aprende a reconhecer os sinais e a se proteger.</p>
+<p><a class="pri" style="display:inline-block;padding:.7rem 1.1rem;border-radius:.5rem;text-decoration:none;font-weight:600" href="#golpes">Conhecer os golpes</a></p></div>
+<div class="sms"><small>Mensagem recebida agora. Toque nos trechos marcados.</small>
+<div class="bubble">Banco Nova Vida: <button class="flag" data-f="0">sua conta será bloqueada hoje.</button> Para evitar, <button class="flag" data-f="1">atualize seus dados agora</button> em <button class="flag" data-f="2">nv-seguro21.link/acesso</button></div>
+<p id="flagnote" aria-live="polite">Esta mensagem é um golpe. Descubra por quê.</p></div>
+</div></section>
+
+<section id="golpes"><div class="wrap"><h2>Os golpes mais comuns</h2>
+<p>Escolha um tipo para ver como ele funciona, quais sinais entregam e como se proteger.</p>
+<div class="tabs" role="tablist" aria-label="Tipos de golpe" id="tabs"></div>
+<div class="panel" id="panel" role="tabpanel" tabindex="0"></div></div></section>
+
+<section id="teste"><div class="wrap"><h2>Golpe ou mensagem legítima?</h2>
+<p>Leia cada mensagem e decida. Você recebe a explicação logo depois.</p>
+<div class="card" id="quiz"></div></div></section>
+
+<section id="protecao"><div class="wrap"><h2>Sua lista de proteção</h2>
+<p>Marque o que você já faz. Seu progresso fica salvo neste aparelho.</p>
+<p id="pgtxt" style="font-weight:600"></p><progress id="pg" max="7" value="0" aria-labelledby="pgtxt"></progress>
+<ul class="check" id="check" style="margin-top:1rem"></ul></div></section>
+
+<section id="socorro"><div class="wrap"><h2>Caí num golpe. E agora?</h2>
+<p>Agir rápido aumenta a chance de recuperar o dinheiro. Siga nesta ordem:</p>
+<ol class="steps">
+<li><strong>Ligue para o banco</strong> pelo número oficial do cartão ou do app. Peça o bloqueio de contas e cartões e, se foi Pix, a contestação pelo MED (Mecanismo Especial de Devolução).</li>
+<li><strong>Troque as senhas</strong> das contas afetadas, começando pelo e-mail, e saia de todos os aparelhos conectados.</li>
+<li><strong>Guarde as provas:</strong> prints, conversas, comprovantes, links e números usados.</li>
+<li><strong>Registre um boletim de ocorrência</strong>, de preferência na delegacia virtual do seu estado.</li>
+<li><strong>Avise seus contatos</strong> se seu perfil foi clonado e denuncie o perfil falso na própria plataforma.</li></ol>
+<p>Você também pode buscar orientação no Procon da sua cidade e denunciar conteúdos criminosos à SaferNet Brasil.</p></div></section>
+</main>
+<footer><div class="wrap">Projeto educativo feito por um estudante. As orientações são gerais e não substituem o atendimento do seu banco ou das autoridades.</div></footer>
+
+<script>
+const $=s=>document.querySelector(s),R=document.documentElement;
+const sv=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}};
+const ld=(k,d)=>{try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}};
+/* Acessibilidade */
+let st=ld("seg-a11y",{fs:100,hc:false,dk:null});
+function apply(msg){
+ R.style.setProperty("--fs",st.fs);
+ st.hc?R.setAttribute("data-contrast","high"):R.removeAttribute("data-contrast");
+ st.dk===null?R.removeAttribute("data-theme"):R.setAttribute("data-theme",st.dk?"dark":"light");
+ $("#hc").setAttribute("aria-pressed",st.hc);
+ $("#dk").setAttribute("aria-pressed",st.dk===null?matchMedia("(prefers-color-scheme:dark)").matches:st.dk);
+ $("#live").textContent=msg||"";sv("seg-a11y",st);
+}
+const fz=d=>{st.fs=Math.min(150,Math.max(80,st.fs+d));apply("Fonte em "+st.fs+"%")};
+$("#fm").onclick=()=>fz(-10);$("#fp").onclick=()=>fz(10);
+$("#fn").onclick=()=>{st.fs=100;apply("Fonte em 100%")};
+$("#hc").onclick=()=>{st.hc=!st.hc;apply(st.hc?"Alto contraste ligado":"Alto contraste desligado")};
+$("#dk").onclick=()=>{const cur=st.dk===null?matchMedia("(prefers-color-scheme:dark)").matches:st.dk;st.dk=!cur;apply(st.dk?"Tema escuro":"Tema claro")};
+$("#rs").onclick=()=>{st={fs:100,hc:false,dk:null};apply("Configurações restauradas")};
+apply();
+/* Menu */
+$("#menu").onclick=e=>{const o=$("#nav").classList.toggle("open");e.target.setAttribute("aria-expanded",o)};
+$("#nav").onclick=e=>{if(e.target.tagName==="A"){$("#nav").classList.remove("open");$("#menu").setAttribute("aria-expanded",false)}};
+/* Mensagem do herói */
+const fl=["Urgência e ameaça: golpistas criam pressa para você não pensar.","Bancos de verdade não pedem para “atualizar dados” por mensagem.","Endereço estranho e sem relação com o banco. Nunca digite dados em links assim."];
+document.querySelectorAll(".flag").forEach(b=>b.onclick=()=>$("#flagnote").textContent=fl[b.dataset.f]);
+/* Tipos de golpe */
+const G=[
+{n:"Phishing",d:"Mensagem por e-mail, SMS ou rede social imita banco, loja ou órgão público e leva você a uma página falsa que rouba senhas e dados.",s:["Urgência, ameaça ou prêmio","Link encurtado ou com endereço diferente do oficial","Pedido de senha, CPF ou código"],e:["Não clique: abra o app ou digite o site oficial você mesmo","Confira o endereço antes de preencher qualquer dado"]},
+{n:"Pix e comprovante falso",d:"O golpista envia um comprovante falso, pede devolução de um “pagamento por engano” ou troca o QR Code de cobrança.",s:["Comprovante em imagem, sem valor no seu app","Pressa para devolver ou entregar o produto","Dados do recebedor diferentes do combinado"],e:["Confirme o dinheiro no app do banco, nunca por print","Confira nome e valor antes de confirmar o Pix","Defina limites de Pix, principalmente à noite"]},
+{n:"WhatsApp e falso parente",d:"Alguém usa a foto de um familiar e diz que mudou de número. Em seguida, pede dinheiro urgente, ou clona a conta e escreve para seus contatos.",s:["Número novo e pedido de dinheiro","Recusa de ligar ou fazer chamada de vídeo","Pedido do código de seis dígitos que chegou por SMS"],e:["Ligue para o número antigo da pessoa","Ative a verificação em duas etapas","Nunca repasse códigos recebidos"]},
+{n:"Ofertas e perfis falsos",d:"Perfis e lojas falsas nas redes prometem preços impossíveis, sorteios ou investimentos com lucro garantido.",s:["Preço muito abaixo do mercado","Promessa de lucro garantido","Pagamento adiantado por Pix para pessoa física"],e:["Pesquise CNPJ, tempo do perfil e reclamações","Prefira pagamento com proteção ao comprador","Desconfie de sorteios que pedem dados do cartão"]},
+{n:"Falsa central do banco",d:"Uma ligação ou mensagem diz que há compra suspeita e pede para você “cancelar”, passar a senha, mover o dinheiro ou instalar um app de acesso remoto.",s:["A pessoa já sabe seu nome e dados","Pede senha, token ou instalação de app","Manda transferir para uma “conta segura”"],e:["O banco nunca pede senha nem token","Desligue e ligue para o número do verso do cartão","Nunca instale apps por pedido de terceiros"]},
+{n:"Vaga de emprego falsa",d:"Anúncios de trabalho fácil pedem taxa de inscrição, depósito ou documentos para roubar dados e dinheiro.",s:["Salário alto para pouco esforço","Cobrança de taxa para começar","Entrevista só por mensagem, com pressa"],e:["Pesquise a empresa em fontes oficiais","Não pague para trabalhar","Envie documentos só após confirmar que a vaga existe"]}];
+const tb=$("#tabs"),pn=$("#panel"),li=a=>"<ul>"+a.map(x=>"<li>"+x+"</li>").join("")+"</ul>";
+function showTab(i,f){
+ [...tb.children].forEach((b,j)=>{b.setAttribute("aria-selected",i===j);b.tabIndex=i===j?0:-1});
+ const g=G[i];pn.setAttribute("aria-labelledby","t"+i);
+ pn.innerHTML='<div class="full"><h3>Como funciona</h3><p style="margin:0">'+g.d+'</p></div><div class="bad"><h3>Sinais de alerta</h3>'+li(g.s)+'</div><div class="good"><h3>Como se proteger</h3>'+li(g.e)+'</div>';
+ if(f)tb.children[i].focus();
+}
+G.forEach((g,i)=>{const b=document.createElement("button");b.role="tab";b.id="t"+i;b.textContent=g.n;b.onclick=()=>showTab(i);
+ b.onkeydown=e=>{const k={ArrowRight:1,ArrowLeft:-1}[e.key];if(k){e.preventDefault();showTab((i+k+G.length)%G.length,1)}};tb.appendChild(b)});
+showTab(0);
+/* Quiz */
+const Q=[
+{m:"Correios: seu pacote não pôde ser entregue. Pague R$ 7,90 de taxa em correios-entrega.top/taxa",g:1,x:"É golpe. O endereço não é oficial e o pedido de pagamento por link é um sinal clássico."},
+{m:"Você fez um Pix de R$ 50,00 para Ana. Não reconhece? Abra o app do banco e conteste.",g:0,x:"Tende a ser legítima: não traz link, não pede dados e manda você abrir o app oficial. Se tiver dúvida, abra o app por conta própria."},
+{m:"Oi, mãe! Troquei de número, salva aí. Preciso de um Pix urgente de R$ 1.200. Não posso falar agora.",g:1,x:"É golpe. Número novo, urgência e recusa de ligar. Ligue para o número antigo antes de qualquer pagamento."},
+{m:"Seu código de verificação é 482913. Não compartilhe com ninguém.",g:0,x:"Legítima, se foi você quem pediu o código. O golpe começa quando alguém pede que você passe esse número."},
+{m:"Parabéns! Você ganhou um iPhone. Informe CPF e dados do cartão para pagar só o frete.",g:1,x:"É golpe. Prêmio que você não disputou e pedido de dados do cartão para “frete”."}];
+let qi=0,qs=0;
+function quiz(){
+ const q=$("#quiz");q.innerHTML="";
+ if(qi>=Q.length){q.innerHTML="<h3>Você acertou "+qs+" de "+Q.length+".</h3><p>"+(qs>=4?"Ótimo olho! Continue desconfiando de pressa e de pedidos de dados.":"Revise os sinais de alerta na seção de tipos de golpe e tente de novo.")+"</p>";
+  const b=document.createElement("button");b.className="pri";b.textContent="Jogar de novo";b.onclick=()=>{qi=0;qs=0;quiz()};q.appendChild(b);b.focus();return}
+ const c=Q[qi];
+ q.innerHTML='<small>Mensagem '+(qi+1)+' de '+Q.length+'</small><div class="bubble" style="margin:.6rem 0 1rem">'+c.m+'</div><div class="row" id="opt"></div><div id="res" aria-live="polite"></div>';
+ [["É golpe",1],["Parece legítima",0]].forEach(([t,v])=>{const b=document.createElement("button");b.textContent=t;
+  b.onclick=()=>{const ok=v===c.g;if(ok)qs++;[...$("#opt").children].forEach(x=>x.disabled=true);
+   $("#res").innerHTML='<div class="fb '+(ok?"c":"r")+'"><strong>'+(ok?"Acertou. ":"Não foi dessa vez. ")+"</strong>"+c.x+"</div>";
+   const n=document.createElement("button");n.className="pri";n.style.marginTop="1rem";n.textContent=qi<Q.length-1?"Próxima mensagem":"Ver resultado";n.onclick=()=>{qi++;quiz()};$("#res").appendChild(n);n.focus()};
+  $("#opt").appendChild(b)});
+}
+quiz();
+/* Checklist */
+const C=["Ativei a verificação em duas etapas no WhatsApp e nas redes sociais","Uso senhas longas e diferentes em cada conta","Não compartilho códigos recebidos por SMS ou aplicativo","Desconfio de mensagens com urgência, prêmio ou ameaça","Confiro o endereço do site antes de digitar dados","Mantenho celular e aplicativos atualizados","Defini limites de Pix e transferências no app do banco"];
+let ck=ld("seg-check",[]);const cl=$("#check");
+function prog(){$("#pg").value=ck.length;$("#pgtxt").textContent=ck.length+" de "+C.length+" hábitos adotados"+(ck.length===C.length?". Parabéns, você está bem protegido!":"")}
+C.forEach((t,i)=>{const l=document.createElement("li"),lb=document.createElement("label"),inp=document.createElement("input");
+ inp.type="checkbox";inp.checked=ck.includes(i);
+ inp.onchange=()=>{ck=inp.checked?[...ck,i]:ck.filter(x=>x!==i);sv("seg-check",ck);prog()};
+ lb.append(inp,document.createTextNode(t));l.appendChild(lb);cl.appendChild(l)});
+prog();
+</script>
+</body>
+</html>
